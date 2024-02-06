@@ -1,0 +1,52 @@
+<!-- app.component.html -->
+<div class="container">
+  <div class="header">
+    <span class="letter" style="--delay:0s;">T</span>
+    <span class="letter" style="--delay:0.1s;">H</span>
+    <span class="letter" style="--delay:0.2s;">U</span>
+    <span class="letter" style="--delay:0.3s;">L</span>
+    <span class="letter" style="--delay:0.4s;">I</span>
+    <span class="letter" style="--delay:0.5s;">J</span>
+    <span class="letter" style="--delay:0.6s;">A</span>
+    <span class="letter">.</span>
+    <span class="letter" style="--delay:0.7s;">i</span>
+    <span class="letter" style="--delay:0.8s;">o</span>
+  </div>
+
+  <div class="content-container">
+    <div class="nav-container">
+      <ul>
+        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+        <li class="submenu" (click)="toggleDesignSubMenu()">
+          <a href="#"><i class="fa fa-paint-brush"></i> Design</a>
+          <ul *ngIf="designSubMenuVisible" class="submenu-list">
+            <li><a href="#"><i class="fa fa-font"></i> Textbox</a></li>
+            
+
+   
+
+            <li cdkDropList (cdkDropListDropped)="onDrop($event)" cdkDrag [cdkDragData]="controls"><i class="fa fa-search"></i> Searchbox</li>
+            <li><a href="#"><i class="fa fa-square"></i> Button</a></li>
+            <li><a href="#"><i class="fa fa-dot-circle"></i> Radiobutton</a></li>
+            <li><a href="#"><i class="fa fa-check-square"></i> Checkbox</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><i class="fa fa-save"></i> Save</a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+    <div  cdkDropList [cdkDropListData]="formFields" (cdkDropListDropped)="onDrop($event) ">
+        <div *ngFor="let field of formFields;"> 
+        <input type="search">
+        <button>Search</button>
+        </div>
+        </div>
+    
+    </div>
+
+    <div class="aside-container">
+      <p>Aside Content</p>
+    </div>
+  </div>
+</div>

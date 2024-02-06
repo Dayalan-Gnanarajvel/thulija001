@@ -1,0 +1,100 @@
+
+.container {
+  display: flex;
+  flex-direction: column; /* Display items in a column */
+}
+
+.content-container {
+  border-color: black;
+  border-width: thick;
+  display: flex;
+  justify-content: space-between; /* Align items with space between them */
+  flex-grow: 1; /* Allow the content container to grow and take available space */
+}
+
+.main {
+  flex: 1; /* Take remaining available space */
+  padding: 20px; /* Optional: Add padding as needed */
+  background-color: #6df081;
+  border-color: black;
+  border-width: thick;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 75px; 
+  overflow: hidden;
+  background-color: #f53939;
+  color: white;
+}
+
+.letter {
+  animation: drop 10s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards infinite;
+  animation-delay: var(--delay);
+  opacity: 0;
+  transform: translateY(-100vh);
+  font-size: 50px;
+}
+
+@keyframes drop {
+  0%, 15% {
+    opacity: 0;
+    transform: translateY(-100vh);
+  }
+  15%, 30% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  30%, 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.aside-container {
+  
+  background-color: #7becf0; 
+  height:660px;
+  width:250px;
+  border-color: black;
+  border-width: thick;
+}
+
+.nav-container {
+  
+  background-color: #dde757;
+  height:660px;
+  width:250px;
+  border-color: black;
+  border-width: thick;
+}
+
+.nav-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-container li {
+  padding: 10px;
+}
+
+.submenu-list {
+  display: none;
+  background-color:  #dde757;
+  padding: 10px;
+}
+
+.submenu-list li {
+  background-color:  #dde757;
+  padding: 5px;
+}
+
+.submenu-list li:hover {
+  background-color: blanchedalmond;
+}
+
+.submenu:hover .submenu-list {
+  display: block;
+}
