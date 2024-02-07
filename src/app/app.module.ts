@@ -12,12 +12,11 @@ import { Add2Component } from './add2/add2.component';
 import { Add3Component } from './add3/add3.component';
 import { EditComponent } from './edit/edit.component';
 import { EmpowerComponent } from './empower/empower.component';
-import { Customers } from './customer';
-
 import { EditempowerComponent } from './editempower/editempower.component';
 import { SchemaComponent } from './schema/schema.component';
 import { EditschemaComponent } from './editschema/editschema.component';
 import { CustomersService } from './customers.service';
+import { AppRoutingModule } from './app-routing.module';
 
 export const routes:Routes =[
 ];
@@ -38,7 +37,8 @@ export const routes:Routes =[
   
   ],
   imports: [
-    BrowserModule,//AppRoutingModule,
+    BrowserModule,
+    AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
     DragDropModule,

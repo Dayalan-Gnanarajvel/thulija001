@@ -15,7 +15,8 @@
         <th scope="col">No</th><br>
         <th scope="col">Project Name</th><br>
         <th scope="col">Description</th><br>
-        <th scope="col">Actions</th><br>
+        <th scope="col"> </th><br>
+        <th scope="col"> </th><br>
         
         
       </tr>
@@ -24,7 +25,7 @@
       <tr  *ngFor = "let cus of customers">
         <th scope="row">{{cus.No}}</th><br><br>
 
-        <td><a routerLink="empower/">{{cus.Project_name}}</a></td><br><br>
+        <td><a routerLink="/empower">{{cus.Project_name}}</a></td><br><br>
         <td>{{cus.Description}}</td><br><br>
        
         <td><button class="btn btn-primary" (click) = "edit(cus)">Edit</button></td><br><br>

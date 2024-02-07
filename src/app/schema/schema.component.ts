@@ -17,7 +17,7 @@ export class SchemaComponent implements OnInit{
 
     ngOnInit(): void {
     
-      this._customersService.getCustomers()
+      this._customersService.getCustomers3()
       .subscribe((data : Customers[]) => {
         this.customers = data;
         console.log(this.customers);
@@ -32,12 +32,11 @@ export class SchemaComponent implements OnInit{
 
   delete(customers: Customers): void{
     console.log(customers.No);
-    this._customersService.deleteCustomer(customers.No)
+    this._customersService.deleteCustomer3(customers.No)
     .subscribe(_data => {
       this.customers =this.customers.filter(u => u !== customers);
       // console.log(_data);
-    });
-  }
+    });
+  }
 
 }
-

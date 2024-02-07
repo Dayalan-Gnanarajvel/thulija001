@@ -28,6 +28,9 @@ export class ProjectsComponent implements OnInit{
       this.router.navigate(['edit/' + this._No]);
     
     }
+    add(){
+      this.router.navigate(['add/']);
+    }
 
     delete(customers: Customers): void{
       console.log(customers.No);
